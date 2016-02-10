@@ -15,11 +15,20 @@ class ViewController: UIViewController {
     var animals = ["cat", "dog", "panda", "elephant", "goat", "pig"]
     var selectedAnimal: String?
     
+    @IBAction func clearData(sender: AnyObject) {
+        print("haha")
+        
+        animals.removeAll()
+        tableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.dataSource=self
         tableView.delegate=self
+        
+        title="Zoo"
     }
 
     override func didReceiveMemoryWarning() {
