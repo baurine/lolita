@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         Post(photo:"photo3",avatar: "avatar", nickname: "bao3", username: "@baurine3", createtime: "4 days ago", content: "content3"),
     ]
     
-    @IBAction func clearData(sender: AnyObject) {
+    @IBAction func clearData(_ sender: AnyObject) {
         print("haha")
         
         data.removeAll()
@@ -46,17 +46,17 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 300
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell = tableView.dequeueReusableCellWithIdentifier("NormalCell", forIndexPath: indexPath) as! PostCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NormalCell", for: indexPath) as! PostCell
         // cell.textLabel?.text=data[indexPath.row]
         let post = data[indexPath.row]
         cell.photo.image = UIImage(named: post.photo)
@@ -69,22 +69,21 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedData = data[indexPath.row].nickname
         
-        performSegueWithIdentifier("showNormalCellDetail", sender: nil)
+        performSegue(withIdentifier: "showNormalCellDetail", sender: nil)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier=="showNormalCellDetail" {
-            let viewController = segue.destinationViewController as! CellDetailViewController
+            let viewController = segue.destination as! CellDetailViewController
             viewController.normalText = selectedData
         }
     }
     
 }
-

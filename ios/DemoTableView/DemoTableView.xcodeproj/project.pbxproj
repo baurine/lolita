@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42C577831E384FD7009B6950 /* CellDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C577821E384FD7009B6950 /* CellDetailViewController.swift */; };
 		42F631FF1C69D34400F26530 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F631FE1C69D34400F26530 /* AppDelegate.swift */; };
 		42F632011C69D34400F26530 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F632001C69D34400F26530 /* ViewController.swift */; };
 		42F632041C69D34400F26530 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42F632021C69D34400F26530 /* Main.storyboard */; };
 		42F632061C69D34400F26530 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42F632051C69D34400F26530 /* Assets.xcassets */; };
 		42F632091C69D34400F26530 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42F632071C69D34400F26530 /* LaunchScreen.storyboard */; };
-		42F632131C69DBD500F26530 /* CellDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F632121C69DBD500F26530 /* CellDetailViewController.swift */; };
 		42F632151C6AE47300F26530 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F632141C6AE47300F26530 /* PostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		42C577821E384FD7009B6950 /* CellDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellDetailViewController.swift; sourceTree = "<group>"; };
 		42F631FB1C69D34400F26530 /* DemoTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42F631FE1C69D34400F26530 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42F632001C69D34400F26530 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,7 +25,6 @@
 		42F632051C69D34400F26530 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42F632081C69D34400F26530 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42F6320A1C69D34400F26530 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		42F632121C69DBD500F26530 /* CellDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellDetailViewController.swift; path = ../CellDetailViewController.swift; sourceTree = "<group>"; };
 		42F632141C6AE47300F26530 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,7 +58,7 @@
 		42F631FD1C69D34400F26530 /* DemoTableView */ = {
 			isa = PBXGroup;
 			children = (
-				42F632121C69DBD500F26530 /* CellDetailViewController.swift */,
+				42C577821E384FD7009B6950 /* CellDetailViewController.swift */,
 				42F631FE1C69D34400F26530 /* AppDelegate.swift */,
 				42F632001C69D34400F26530 /* ViewController.swift */,
 				42F632021C69D34400F26530 /* Main.storyboard */,
@@ -110,6 +110,7 @@
 				TargetAttributes = {
 					42F631FA1C69D34400F26530 = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -151,8 +152,8 @@
 			files = (
 				42F632011C69D34400F26530 /* ViewController.swift in Sources */,
 				42F631FF1C69D34400F26530 /* AppDelegate.swift in Sources */,
-				42F632131C69DBD500F26530 /* CellDetailViewController.swift in Sources */,
 				42F632151C6AE47300F26530 /* PostCell.swift in Sources */,
+				42C577831E384FD7009B6950 /* CellDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +268,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.baurine.DemoTableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -278,6 +280,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.baurine.DemoTableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -300,6 +303,7 @@
 				42F6320F1C69D34400F26530 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

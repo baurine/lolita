@@ -14,8 +14,8 @@ class CellDetailViewController: UIViewController {
     
     var normalText: String?
     
-    @IBAction func popBack(sender: AnyObject) {
-        navigationController!.popViewControllerAnimated(true)
+    @IBAction func popBack(_ sender: AnyObject) {
+        navigationController!.popViewController(animated: true)
     }
     
     override func viewDidLoad() {
